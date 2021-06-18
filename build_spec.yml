@@ -28,6 +28,6 @@ steps:
       date >> docktest-result.txt
 
 outputArtifacts:
-  - name: docktest-result
+  - name: docktest-result.txt
     type: BINARY
     location: docktest-result.txt
