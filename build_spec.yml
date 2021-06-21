@@ -31,3 +31,6 @@ outputArtifacts:
   - name: docktest-result
     type: BINARY
     location: docktest-result.txt
+    artifactParams:
+      testEnv: ${testEnv}
+      vers: 1.0
