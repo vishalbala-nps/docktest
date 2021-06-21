@@ -6,6 +6,7 @@ shell: bash
 env:
   variables:
     "testEnv" : "Hello Bala, This is a test variable!!!"
+    "VERS" : 20.0
 
 steps:
   - type: Command
@@ -24,6 +25,7 @@ steps:
     name: "Shutdown the app"
     command: |
       docker stop docktest >> docktest-result.txt
+      docker save -o hello-bala_1.0.tar docktest:1.0
       docker rm docktest >> docktest-result.txt
       date >> docktest-result.txt
 
@@ -34,3 +36,10 @@ outputArtifacts:
     artifactParams:
       testEnv: ${testEnv}
       vers: 1.0
+      
+  - name: hello-bala
+    type: BINARY
+    location: hello-bala_1.0.tar
+    artifactParams:
+      vers: ${VERS}
+      message: ${testEnv}
