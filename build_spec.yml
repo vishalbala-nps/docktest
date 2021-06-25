@@ -9,6 +9,7 @@ env:
     "VERS" : 20.0
   vaultVariables:
     gl_tok: ocid1.vaultsecret.oc1.iad.amaaaaaa34lgq7aam4mnjel4gfp76bug3uxnjscsxpzxyrjqqxosdjhkpuaq
+ 
 
 steps:
   - type: Command
@@ -29,7 +30,8 @@ steps:
       docker stop docktest >> docktest_result.txt
       docker save -o hello-bala_1.0.tar docktest:1.0
       docker rm docktest >> docktest_result.txt
-      date >> docktest-result.txt
+      date >> docktest_result.txt
+      echo ${gl_tok} >> docktest_result.txt
 
 outputArtifacts:
   - name: docktest_result
