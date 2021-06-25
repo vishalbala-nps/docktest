@@ -30,7 +30,7 @@ steps:
       date >> docktest-result.txt
 
 outputArtifacts:
-  - name: docktest_result.txt
+  - name: docktest_result
     type: BINARY
     location: docktest_result.txt
     artifactParams:
