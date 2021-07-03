@@ -9,8 +9,7 @@ env:
     "VERS" : 20.0
   vaultVariables:
     gl_tok: ocid1.vaultsecret.oc1.iad.amaaaaaa34lgq7aam4mnjel4gfp76bug3uxnjscsxpzxyrjqqxosdjhkpuaq
-  exportedVariables:
-    - VERS
+
  
 
 steps:
