@@ -9,7 +9,6 @@ env:
     "VERS" : 20.0
   exportedVariables:
     - VERS
-    - param1
 
 
  
@@ -35,7 +34,6 @@ steps:
       docker rm docktest >> docktest_result.txt
       date >> docktest_result.txt
       echo ${gl_tok} >> docktest_result.txt
-      param1 = 11.0
 
 outputArtifacts:
   - name: docktest_result
