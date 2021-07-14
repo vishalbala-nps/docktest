@@ -14,7 +14,8 @@ steps:
   - type: Command
     name: "Shutdown the app"
     command: |
-       java -version > docktest-result.txt
+       yum -y install java-11-openjdk-devel
+       java -version 2> docktest-result.txt
        testEnv=`cat docktest-result.txt`
 outputArtifacts:
   - name: docktest-result
