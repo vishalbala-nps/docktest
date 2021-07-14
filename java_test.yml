@@ -19,5 +19,5 @@ steps:
 outputArtifacts:
   - name: docktest-result
     type: BINARY
-    location: ddocktest-result.txt
+    location: docktest-result.txt
 
