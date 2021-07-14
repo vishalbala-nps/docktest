@@ -14,7 +14,7 @@ steps:
   - type: Command
     name: "Shutdown the app"
     command: |
-       java --version > docktest-result.txt
+       java -version > docktest-result.txt
        testEnv=`cat docktest-result.txt`
 outputArtifacts:
   - name: docktest-result
