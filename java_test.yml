@@ -17,7 +17,7 @@ steps:
        java --version > docktest-result.txt
        testEnv=`cat docktest-result.txt`
 outputArtifacts:
-  - name: docktest_result
+  - name: docktest-result
     type: BINARY
-    location: docktest_result.txt
+    location: ddocktest-result.txt
 
